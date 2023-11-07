@@ -47,7 +47,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		  if (getStore().newUser.password === getStore().newUser.rep_password) {
 			getActions().saveUser(navigate);
 		  } else {
-			alert("las contraseñas no coinciden");
+			alert("Las Contraseñas no Coinciden");
 		  }
 		},
   
@@ -65,7 +65,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			  console.log("data", data);
 			  navigate("/login");
 			} else {
-			  throw Error("Error al registrar");
+			  throw Error("Error al Registrar");
 			}
 		  } catch (error) {
 			console.error(error);
@@ -99,16 +99,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 			} else {
 			  setStore({
 				alert: {
-				  text: "Usuario no registrado",
+				  text: "Usuario no Registrado",
 				  show: true,
 				  textbtn: "Registrarme",
 				},
 			  });
-			  console.error("Correo o Contraseña incorrectas");
+			  console.error("Correo o Contraseña incorrectos");
 			}
 		  } catch (error) {
 			console.log(error);
-			console.log("hay un error en el login");
+			console.log("Hay un error en el login");
 		  }
 		},
   
